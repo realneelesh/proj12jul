@@ -1,8 +1,11 @@
 import './App.css';
 import NavigationBar from './components/NavigationBar';
+import Admin from './pages/Admin';
 import Auth from './pages/Auth';
+import ContactUs from './pages/ContactUs';
 import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Profile from './pages/profile';
 
 function App() {
   return (
@@ -14,6 +17,9 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<div align="left" style={{padding: '20px'}}>About</div>} />
             <Route path="/auth" element={<Auth />} />
+            <Route path="/admin" element={<Admin />} />
+            <Route path="/contactus" element={<ContactUs />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </BrowserRouter>
     </div>
