@@ -10,7 +10,8 @@ function NavigationBar(props) {
             alignItems: 'center',
             height: '64px',
             width: '100vw',
-            backgroundColor: '#001529'
+            backgroundColor: '#001529',
+            position: 'fixed',
         }}>
             <Link to="/" style={{textDecoration: 'none'}}>
             <div

@@ -1,10 +1,11 @@
 import { Input, Button } from 'antd';
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Auth(props) {
-
+    
     const [type, setType] = useState('signup');    // state variable to store the type of form
+    const navigate = useNavigate();               // navigate function from the props
 
     return (
         <>
@@ -43,16 +44,17 @@ function Auth(props) {
                         <br />
                         <br />
                         <div>
-                        <Link to="/" style={{textDecoration: 'none'}} onClick={()=>{
+                        <Button onClick={()=>{
                             localStorage.setItem('user', 'consumer');
+                            navigate('/');
                             window.location.reload();
-                        }}> <Button type="primary">Login</Button> </Link>
+                        }} type="primary">Login</Button>
                         &nbsp; &nbsp;
-                        <Link to="/admin" style={{textDecoration: 'none'}}
-                        onClick={()=>{
+                        <Button onClick={()=>{
                             localStorage.setItem('user', 'admin');
+                            navigate('/');
                             window.location.reload();
-                        }}> <Button type="ghost">Login as Admin</Button> </Link>
+                        }} type="ghost">Login as Admin</Button>
                         </div>
                         <br />
                         <br />

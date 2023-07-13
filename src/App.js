@@ -6,6 +6,7 @@ import ContactUs from './pages/ContactUs';
 import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Profile from './pages/profile';
+import About from './pages/About';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/about" element={<div align="left" style={{padding: '20px'}}>About</div>} />
+            <Route path="/about" element={<About/>} />
             <Route path="/auth" element={<Auth />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/contactus" element={<ContactUs />} />

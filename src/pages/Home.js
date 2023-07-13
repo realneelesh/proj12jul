@@ -11,10 +11,11 @@ function Home(props) {
                 left: '0',
                 height: 'calc(100vh - 64px)',
                 width: '17vw',
-                backgroundColor: 'silver',
+                backgroundColor: '#DEDEDE',
             }}>
                 {/* Left Sidebar */}
             </div>
+           
         </div>
     );
 }
