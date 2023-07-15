@@ -2,7 +2,7 @@ import React from 'react';
 
 function Admin(props) {
     return (
-        <div>
+        <div style={{paddingTop: '69px'}}>
             Admin
         </div>
     );

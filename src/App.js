@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Profile from './pages/profile';
 import About from './pages/About';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/admin" element={<Admin />} />
             <Route path="/contactus" element={<ContactUs />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/dashboard" element={<Dashboard />} />
           </Routes>
         </BrowserRouter>
     </div>

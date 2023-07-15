@@ -1,6 +1,35 @@
-import { Input, Button } from 'antd';
+import { Input, Button, Dropdown, Space } from 'antd';
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+
+import { DownOutlined, SmileOutlined } from '@ant-design/icons';
+
+const items = [
+  {
+    key: '1',
+    label: (
+      <span>Farmer</span>
+    ),
+  },
+  {
+    key: '2',
+    label: (
+      <span>CPU</span>
+    ),
+  },
+  {
+    key: '3',
+    label: (
+      <span>AC/DC</span>
+    )
+  },
+  {
+    key: '4',
+    label: (
+      <span>CPC</span>
+    )
+  }
+];
 
 function Auth(props) {
     
@@ -46,13 +75,13 @@ function Auth(props) {
                         <div>
                         <Button onClick={()=>{
                             localStorage.setItem('user', 'consumer');
-                            navigate('/');
+                            navigate('/dashboard');
                             window.location.reload();
                         }} type="primary">Login</Button>
                         &nbsp; &nbsp;
                         <Button onClick={()=>{
                             localStorage.setItem('user', 'admin');
-                            navigate('/');
+                            navigate('/admin');
                             window.location.reload();
                         }} type="ghost">Login as Admin</Button>
                         </div>
@@ -65,13 +94,21 @@ function Auth(props) {
                 {
                     type === 'signup' ? <div align="left">
                         <h2>Signup</h2>
-                        <Input type="text" placeholder="First name" />
-                        <br />
-                        <br />
-                        <Input type="text" placeholder="Last name" />
+                        <Input type="text" placeholder="Name" />
+                        
                         <br />
                         <br />
                         <Input type="text" placeholder="Enter your email" />
+                        <br />
+                        <br /> 
+                        <Dropdown id="dropdownie" menu={{ items }}>
+                            <a onClick={(e) => e.preventDefault()}>
+                            <Space>
+                                Stakeholder type
+                                <DownOutlined />
+                            </Space>
+                            </a>
+                        </Dropdown>
                         <br />
                         <br />
                         <Input type="password" placeholder="Enter your password" />
